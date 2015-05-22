@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A77292F6-FB78-4D55-B190-75BD4BBCECAE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>WeekTwoAssessment</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>83F8BAE86BCB32392C13D79A77E1AB60BB3E1738</key>
+		<string>https://github.com/brent1x/mm_week2assessment.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>WeekTwoAssessment.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>83F8BAE86BCB32392C13D79A77E1AB60BB3E1738</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/brent1x/mm_week2assessment.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>83F8BAE86BCB32392C13D79A77E1AB60BB3E1738</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>83F8BAE86BCB32392C13D79A77E1AB60BB3E1738</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WeekTwoAssessment</string>
+		</dict>
+	</array>
+</dict>
+</plist>
