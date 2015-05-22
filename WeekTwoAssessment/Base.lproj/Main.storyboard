@@ -163,18 +163,22 @@
                                     <rect key="frame" x="80" y="148" width="240" height="30"/>
                                 </variation>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMf-ks-cOo">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Wikipedia Info">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wikipedia Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcO-bq-5fv">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" button="YES" staticText="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="80" y="494" width="240" height="30"/>
+                                    <rect key="frame" x="80" y="492" width="240" height="21"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="mEg-4z-EEk" kind="show" id="uog-my-ALP"/>
+                                    <outletCollection property="gestureRecognizers" destination="cUc-4P-VJt" appends="YES" id="cwq-BQ-CzZ"/>
                                 </connections>
-                            </button>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -186,7 +190,7 @@
                                 <exclude reference="KbQ-5l-OFe"/>
                                 <exclude reference="xXW-OJ-zw0"/>
                                 <exclude reference="fYa-fn-oiR"/>
-                                <exclude reference="fMf-ks-cOo"/>
+                                <exclude reference="mcO-bq-5fv"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -197,7 +201,7 @@
                                 <include reference="KbQ-5l-OFe"/>
                                 <include reference="xXW-OJ-zw0"/>
                                 <include reference="fYa-fn-oiR"/>
-                                <include reference="fMf-ks-cOo"/>
+                                <include reference="mcO-bq-5fv"/>
                             </mask>
                         </variation>
                     </view>
@@ -212,6 +216,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIm-3a-PNv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="cUc-4P-VJt">
+                    <connections>
+                        <segue destination="mEg-4z-EEk" kind="presentation" modalPresentationStyle="fullScreen" id="8GZ-ji-Hh2"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2224.5" y="465"/>
         </scene>
@@ -226,58 +235,75 @@
                     <view key="view" contentMode="scaleToFill" id="8qC-jg-1ws">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="QgR-nk-Axs">
-                                <rect key="frame" x="-10" y="-10" width="20" height="20"/>
-                            </activityIndicatorView>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u8N-fe-SIa">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="137" width="400" height="463"/>
+                                </variation>
                                 <connections>
-                                    <outlet property="delegate" destination="mEg-4z-EEk" id="DKB-Mq-YtI"/>
+                                    <outlet property="delegate" destination="mEg-4z-EEk" id="R0j-mL-rVt"/>
                                 </connections>
                             </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="QgR-nk-Axs">
+                                <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="92" width="20" height="20"/>
+                                </variation>
+                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8c-cM-PhR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="125" y="559" width="200" height="300"/>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fj0-4j-3gm">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="135" y="569" width="200" height="300"/>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8oe-Z9-19Y">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="145" y="579" width="200" height="300"/>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJR-1p-sTX">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="173" y="87" width="54" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="onDismissPressed:" destination="mEg-4z-EEk" eventType="touchUpInside" id="cBw-9c-19X"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="QgR-nk-Axs" secondAttribute="centerX" id="61C-Qt-VDB"/>
-                            <constraint firstAttribute="centerY" secondItem="QgR-nk-Axs" secondAttribute="centerY" id="EMj-Hk-mPj"/>
-                            <constraint firstItem="u8N-fe-SIa" firstAttribute="leading" secondItem="8qC-jg-1ws" secondAttribute="leading" id="MUw-0m-0B8"/>
-                            <constraint firstItem="u8N-fe-SIa" firstAttribute="top" secondItem="ZLR-cq-7iu" secondAttribute="bottom" id="NGO-WA-kUU"/>
-                            <constraint firstAttribute="centerY" secondItem="QgR-nk-Axs" secondAttribute="centerY" id="O85-Wz-cnm"/>
-                            <constraint firstAttribute="trailing" secondItem="u8N-fe-SIa" secondAttribute="trailing" id="Sr8-p2-Tkf"/>
-                            <constraint firstAttribute="bottom" secondItem="u8N-fe-SIa" secondAttribute="bottom" id="xAL-q5-cRp"/>
-                            <constraint firstAttribute="centerX" secondItem="QgR-nk-Axs" secondAttribute="centerX" id="xo8-7P-2uG"/>
-                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="QgR-nk-Axs"/>
                                 <exclude reference="u8N-fe-SIa"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="MUw-0m-0B8"/>
-                                <exclude reference="NGO-WA-kUU"/>
-                                <exclude reference="Sr8-p2-Tkf"/>
-                                <exclude reference="xAL-q5-cRp"/>
-                                <exclude reference="61C-Qt-VDB"/>
-                                <exclude reference="EMj-Hk-mPj"/>
-                                <exclude reference="O85-Wz-cnm"/>
-                                <exclude reference="xo8-7P-2uG"/>
+                                <exclude reference="QgR-nk-Axs"/>
+                                <exclude reference="H8c-cM-PhR"/>
+                                <exclude reference="Fj0-4j-3gm"/>
+                                <exclude reference="8oe-Z9-19Y"/>
+                                <exclude reference="xJR-1p-sTX"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="QgR-nk-Axs"/>
                                 <include reference="u8N-fe-SIa"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="MUw-0m-0B8"/>
-                                <include reference="NGO-WA-kUU"/>
-                                <include reference="Sr8-p2-Tkf"/>
-                                <include reference="xAL-q5-cRp"/>
-                                <include reference="61C-Qt-VDB"/>
-                                <include reference="EMj-Hk-mPj"/>
-                                <include reference="O85-Wz-cnm"/>
-                                <include reference="xo8-7P-2uG"/>
+                                <include reference="QgR-nk-Axs"/>
+                                <include reference="H8c-cM-PhR"/>
+                                <include reference="Fj0-4j-3gm"/>
+                                <include reference="8oe-Z9-19Y"/>
+                                <include reference="xJR-1p-sTX"/>
                             </mask>
                         </variation>
                     </view>
@@ -307,6 +333,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yUX-ra-vBZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="738" y="462"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="sfb-rw-ufx">
+            <objects>
+                <viewController id="haY-nR-L45" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BAD-GT-7Ts"/>
+                        <viewControllerLayoutGuide type="bottom" id="7ex-bh-hfs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GEy-QW-458">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SKT-0V-QNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

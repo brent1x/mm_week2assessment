@@ -40,5 +40,8 @@
     self.activityIndicator.hidden = TRUE;
 }
 
+- (IBAction)onDismissPressed:(UIButton *)sender {
+    [self.presentingViewController dismissViewControllerAnimated:true completion:nil];
+}
 
 @end
