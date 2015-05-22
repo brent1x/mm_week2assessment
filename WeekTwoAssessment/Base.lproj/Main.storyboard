@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MXv-az-rGE">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -166,11 +165,11 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMf-ks-cOo">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Wikipedia Info">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="177" y="494" width="46" height="30"/>
+                                    <rect key="frame" x="80" y="494" width="240" height="30"/>
                                 </variation>
                                 <connections>
                                     <segue destination="mEg-4z-EEk" kind="show" id="uog-my-ALP"/>
@@ -213,7 +212,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIm-3a-PNv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="mmt-Kr-fB2"/>
             </objects>
             <point key="canvasLocation" x="2224.5" y="465"/>
         </scene>
@@ -228,6 +226,9 @@
                     <view key="view" contentMode="scaleToFill" id="8qC-jg-1ws">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="QgR-nk-Axs">
+                                <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                            </activityIndicatorView>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u8N-fe-SIa">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -235,44 +236,47 @@
                                     <outlet property="delegate" destination="mEg-4z-EEk" id="DKB-Mq-YtI"/>
                                 </connections>
                             </webView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="QgR-nk-Axs">
-                                <rect key="frame" x="-10" y="-10" width="20" height="20"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="QgR-nk-Axs" secondAttribute="centerX" id="61C-Qt-VDB"/>
                             <constraint firstAttribute="centerY" secondItem="QgR-nk-Axs" secondAttribute="centerY" id="EMj-Hk-mPj"/>
-                            <constraint firstItem="u8N-fe-SIa" firstAttribute="top" secondItem="8qC-jg-1ws" secondAttribute="topMargin" id="evB-33-6vJ"/>
-                            <constraint firstItem="u8N-fe-SIa" firstAttribute="leading" secondItem="8qC-jg-1ws" secondAttribute="leadingMargin" constant="-16" id="js9-qG-UBz"/>
-                            <constraint firstItem="u8N-fe-SIa" firstAttribute="bottom" secondItem="8qC-jg-1ws" secondAttribute="bottomMargin" id="tjP-7M-8gM"/>
+                            <constraint firstItem="u8N-fe-SIa" firstAttribute="leading" secondItem="8qC-jg-1ws" secondAttribute="leading" id="MUw-0m-0B8"/>
+                            <constraint firstItem="u8N-fe-SIa" firstAttribute="top" secondItem="ZLR-cq-7iu" secondAttribute="bottom" id="NGO-WA-kUU"/>
+                            <constraint firstAttribute="centerY" secondItem="QgR-nk-Axs" secondAttribute="centerY" id="O85-Wz-cnm"/>
+                            <constraint firstAttribute="trailing" secondItem="u8N-fe-SIa" secondAttribute="trailing" id="Sr8-p2-Tkf"/>
+                            <constraint firstAttribute="bottom" secondItem="u8N-fe-SIa" secondAttribute="bottom" id="xAL-q5-cRp"/>
                             <constraint firstAttribute="centerX" secondItem="QgR-nk-Axs" secondAttribute="centerX" id="xo8-7P-2uG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="u8N-fe-SIa" secondAttribute="trailing" constant="-16" id="y8m-5f-1gm"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="u8N-fe-SIa"/>
                                 <exclude reference="QgR-nk-Axs"/>
+                                <exclude reference="u8N-fe-SIa"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="evB-33-6vJ"/>
-                                <exclude reference="js9-qG-UBz"/>
-                                <exclude reference="tjP-7M-8gM"/>
-                                <exclude reference="y8m-5f-1gm"/>
+                                <exclude reference="MUw-0m-0B8"/>
+                                <exclude reference="NGO-WA-kUU"/>
+                                <exclude reference="Sr8-p2-Tkf"/>
+                                <exclude reference="xAL-q5-cRp"/>
+                                <exclude reference="61C-Qt-VDB"/>
                                 <exclude reference="EMj-Hk-mPj"/>
+                                <exclude reference="O85-Wz-cnm"/>
                                 <exclude reference="xo8-7P-2uG"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="u8N-fe-SIa"/>
                                 <include reference="QgR-nk-Axs"/>
+                                <include reference="u8N-fe-SIa"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="evB-33-6vJ"/>
-                                <include reference="js9-qG-UBz"/>
-                                <include reference="tjP-7M-8gM"/>
-                                <include reference="y8m-5f-1gm"/>
+                                <include reference="MUw-0m-0B8"/>
+                                <include reference="NGO-WA-kUU"/>
+                                <include reference="Sr8-p2-Tkf"/>
+                                <include reference="xAL-q5-cRp"/>
+                                <include reference="61C-Qt-VDB"/>
                                 <include reference="EMj-Hk-mPj"/>
+                                <include reference="O85-Wz-cnm"/>
                                 <include reference="xo8-7P-2uG"/>
                             </mask>
                         </variation>

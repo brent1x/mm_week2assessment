@@ -31,8 +31,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    NSLog(@"%@", self.city.url);
-
     self.cityName.hidden = TRUE;
     self.cityNickname.hidden = TRUE;
 
@@ -45,8 +43,6 @@
     self.cityNicknameLabel.text = self.city.nickname;
 
     [self.cityName addTarget:self action:@selector(updateTitleUsingTextField:) forControlEvents:UIControlEventEditingChanged];
-
-
 
 }
 
@@ -89,7 +85,7 @@
 
 #pragma mark - Wikipedia Web View
 
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(UILabel *)sender {
     City *city = self.city;
     CityViewController *cityVC = segue.destinationViewController;
     cityVC.city = city;

@@ -22,10 +22,7 @@
     [super viewDidLoad];
     self.title = @"Info";
 
-    NSLog(@"%@", self.city.url);
     [self loadReqestWithText:self.city.url];
-
-
 }
 
 -(void)loadReqestWithText:(NSString *)text{
