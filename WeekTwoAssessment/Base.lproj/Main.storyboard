@@ -173,12 +173,24 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="80" y="492" width="240" height="21"/>
+                                    <rect key="frame" x="80" y="483" width="240" height="21"/>
                                 </variation>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="cUc-4P-VJt" appends="YES" id="cwq-BQ-CzZ"/>
                                 </connections>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgB-x0-b3l">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Set Title">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="162" y="512" width="76" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="onSetTitleButtonTapped:" destination="HGJ-jF-433" eventType="touchUpInside" id="lCn-s0-5LY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -191,6 +203,7 @@
                                 <exclude reference="xXW-OJ-zw0"/>
                                 <exclude reference="fYa-fn-oiR"/>
                                 <exclude reference="mcO-bq-5fv"/>
+                                <exclude reference="cgB-x0-b3l"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -202,6 +215,7 @@
                                 <include reference="xXW-OJ-zw0"/>
                                 <include reference="fYa-fn-oiR"/>
                                 <include reference="mcO-bq-5fv"/>
+                                <include reference="cgB-x0-b3l"/>
                             </mask>
                         </variation>
                     </view>
@@ -213,6 +227,7 @@
                         <outlet property="cityNameLabel" destination="ubX-TT-29W" id="z2b-JT-hIe"/>
                         <outlet property="cityNickname" destination="fYa-fn-oiR" id="zRX-L1-cjt"/>
                         <outlet property="cityNicknameLabel" destination="xXW-OJ-zw0" id="BQq-1d-Vua"/>
+                        <outlet property="setTitleButton" destination="cgB-x0-b3l" id="lUz-07-g8Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIm-3a-PNv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -333,22 +348,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yUX-ra-vBZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="738" y="462"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="sfb-rw-ufx">
-            <objects>
-                <viewController id="haY-nR-L45" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="BAD-GT-7Ts"/>
-                        <viewControllerLayoutGuide type="bottom" id="7ex-bh-hfs"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="GEy-QW-458">
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SKT-0V-QNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>

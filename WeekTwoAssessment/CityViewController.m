@@ -22,6 +22,7 @@
 
 @property BOOL isEditing;
 
+@property (weak, nonatomic) IBOutlet UIButton *setTitleButton;
 
 
 @end
@@ -91,4 +92,16 @@
     cityVC.city = city;
 }
 
+
+- (IBAction)onSetTitleButtonTapped:(UIButton *)sender {
+    NSLog(@"set title tapped");
+    [self.delegate cityView:self onSetTitleButtonTapped:self.city.city];
+}
+
+
 @end
+
+
+
+
+

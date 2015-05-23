@@ -11,7 +11,7 @@
 #import "CityViewController.h"
 #import "WebViewController.h"
 
-@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate, CityViewControllerDelegate>
 @property NSMutableArray *cities;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -91,6 +91,11 @@
 
     CityViewController *cityVC = segue.destinationViewController;
     cityVC.city = city;
+
+    CityViewController *vc = segue.destinationViewController;
+
+    vc.delegate = self;
+    
 }
 
 
@@ -99,6 +104,10 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.tableView reloadData];
+}
+
+- (void)cityView:(CityViewController *)vc onSetTitleButtonTapped:(NSString *)title {
+    self.title = title;
 }
 
 
